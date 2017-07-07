@@ -22,7 +22,7 @@
     <ul ng-show="loaded && slides.length>0" class="nav nav-pills">
         <li style="display:none" ng-class="{'active':isCurrentAnimation('slide-left-animation')}"><a ng-click="setCurrentAnimation('slide-left-animation')">LEFT</a></li>
         <li style="display:none" ng-class="{'active':isCurrentAnimation('slide-down-animation')}"><a ng-click="setCurrentAnimation('slide-down-animation')">DOWN</a></li>
-        <li style="" ng-class="{'active':isCurrentAnimation('fade-in-animation')}"><a ng-click="setCurrentAnimation('fade-in-animation')">FADE</a></li>
+        <li style="display:none" ng-class="{'active':isCurrentAnimation('fade-in-animation')}"><a ng-click="setCurrentAnimation('fade-in-animation')">FADE</a></li>
     </ul>
 
     <script src="libs/jquery.min.js"></script>
