@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+
+<title>Max Pro Displays : Image Uploader</title>
+
+<!-- LIBS CSS -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/styles.css">
+<!-- LIBS JS -->
+<script src="libs/angular.min.js"></script>
+<script src="libs/angular-resource.min.js"></script>
+<script src="libs/angular-animate.min.js"></script>
+<script src="libs/ui-bootstrap-tpls-0.11.0.min.js"></script>
+<script src="libs/ng-file-upload.min.js"></script>
+<!-- YOUR JS -->
+<script src="js/uploadApp.js"></script>
+<script src="js/imageEdit.js"></script>
+</head>
+<body>
+  <div class="container">
+
+	<div ng-controller="EditCtrl" style="width=20%">
+     <table border=1>
+         <tr>
+             <td ng-if="paths.length === 0">No images found</td>
+             <td ng-if="paths.length > 0" ng-repeat="path in paths">
+                 <img title="{{path.id}}" ng-src="{{path.src}}" height="180px" width="180px" />
+                 <br/>
+                 <center><a href="#" title="Remove" ng-click="removeImage(path.id)">X</a></center>
+             </td>
+         </tr>
+     </table>
+	</div>
+    <!-- FILES -->
+
+    <form ng-controller="FilesCtrl">
+      <h1>Upload multiple Files</h1>
+     <!-- BROWSE -->
+	  <div class="form-group">
+	    <button class="btn btn-primary"
+          ngf-select="uploadFiles($files)"
+          multiple
+	      accept="*">
+	      &nbsp;&nbsp;Browse Files
+	    </button>
+	  </div>
+	  <div class="uploadedfile" ng-repeat="f in files" style="font:smaller">
+	    <!-- FILE -->
+	    <span ng-class="{removed: f.removed}">{{f.name}} {{f.$errorParam}}</span>
+	    <!-- PROGRESS -->
+	    <div class="progress" ng-show="f.progress >= 0">
+	      <div class="progress-bar progress-bar-success" role="progressbar"
+	        aria-valuenow="{{f.progress}}" aria-valuemin="0" aria-valuemax="100"
+	        style="width: {{f.progress}}%">
+            <span class="sr-only">{{f.progress}}% Complete</span> {{f.progress}}%
+          </div>
+        </div>
+	  </div>
+	  {{errorMsg}}
+    </form>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body{background: #fff url(../images/loginBg.png) center top no-repeat; background-size: 100%; font-size:12px; color:#333333; font-family: 'Open Sans', sans-serif;}
+input[type="text"], input[type="password"], input[type="submit"]{display: block;width: 100%; border-radius:5px;}
+#login {margin: 0 auto;padding: 65px 0 0;position: relative;text-align: center;width: 360px;background: #fff;clear: both;border-radius: 5px;display: table;padding: 30px;box-shadow: 0 0 10px #ddd;}
+#login span.img{
+border-radius: 50px;
+background: url(../images/loginImg.png) no-repeat center center;
+background-size: 63%;border: 1px solid #e1e1e1;height: 100px;width: 100px;display: inline-block;}
+#login h1 {color: #000000;font-size: 13px;margin: 16px 0;line-height: 10px;font-weight:600;}
+#login h1 small{color:#999999; display: block; font-size: 12px; margin-top:10px;}
+#login form {position: relative }
+#login form input[type="text"]{background: #fcfdfe url(../images/username.png) 15px center no-repeat;}
+#login form input[type="password"]{background: #fcfdfe url(../images/pass.png) 15px center no-repeat;}
+#login form input[type="text"],
+#login form input[type="password"] {
+transition: all 0.5s ease;background-size:26px;border: 1px solid #e1e1e1;color: #777;font-size: 14px;margin: 0 0 25px;padding: 5px 10px 5px 50px;height:50px; line-height:50px;}
+#login form input[type="text"]:focus,
+#login form input[type="password"]:focus {
+background-color: #fff;border: 1px solid #ed1c24;outline: none;
+-webkit-box-shadow: 0 0 2px #ed1c24 inset;
+-moz-box-shadow: 0 0 2px #ed1c24 inset;
+-ms-box-shadow: 0 0 2px #ed1c24 inset;
+-o-box-shadow: 0 0 2px #ed1c24 inset;
+box-shadow: 0 0 2px #ed1c24 inset;
+}
+
+#login form input[type="submit"] {
+background: #0182e8 url(../images/buttonArrow.png) no-repeat 85px center;
+background-size:22px;color: #fff;cursor: pointer;float: left;font-weight:600;font-size:13px;padding-right: 28px;margin: 0;position: relative;border:none;text-transform:uppercase;height:44px; line-height:44px;transition: all 0.3s ease;}
+#login form input[type="submit"]:hover {background: #087cd8 url(../images/buttonArrow.png) no-repeat 95px center; background-size:22px;}
+
+#login form div{position:relative;}
+#login form div a {color: #38b5ed;float: right;font-size: 12px;position: absolute;right: 15px;top: 21px;}
+
+.row.loginPanel{margin: 0 80px;}
+.row.loginPanel .content{color:#fff; padding-top:50px;}
+.row.loginPanel .content h5{font-weight:600;}
+
+.topWhiteBg{background: #fff;margin: 0 0 50px 0;padding: 0; height:60px; }
+.navbar-brand {float: left;width: 160px;background: url(../images/logo.png) no-repeat left center;background-size: 100%;display: block;margin-top:4px;padding: 0;margin-left: 12px;}
+#login .checkbox {text-align: left;margin: 0;top: 15px;left: 15px;padding: 0 0 0 20px;}
+#login .checkbox input{position:absolute; top: -3px;}
+
+
+@media only screen and (max-width : 800px){
+.row.loginPanel{margin:0; padding: 15px 0; display:table; width:100%;}
+.row.loginPanel .col-md-8, .row.loginPanel .col-md-4 {display: table-cell;float: none; vertical-align: top;}
+.row.loginPanel .content{padding-top:10px;}
+#login .checkbox{top:0;}
+#login form input[type="submit"]{margin-top:20px;}
+.topWhiteBg{margin:0;}
+}
+
+@media only screen and (max-width : 700px){
+body{background:#029aed}
+.row.loginPanel .col-md-8, .row.loginPanel .col-md-4 {display: list-item;float: none; vertical-align: top;}
+.row.loginPanel .content{padding-top:0}
+#login{width: 100%;}
+#login form input[type="submit"] {background: #0182e8 url(../images/buttonArrow.png) no-repeat 85% center; background-size:22px;}
+#login form input[type="submit"]:hover {background: #087cd8 url(../images/buttonArrow.png) no-repeat 90% center; background-size:22px;}
+
+}
+
+@media only screen and (max-width : 500px){
+
+}
