@@ -86,7 +86,7 @@ app.controller('MainCtrl', function($scope, $timeout, QueueService, $http, $inte
                 }, '');
                 */
                 paths=inputObj.data;
-                console.log(paths.toSource());
+                //console.log(paths.toSource());
             }
             QueueService.loadManifest(paths);
         });
