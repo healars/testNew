@@ -52,7 +52,7 @@ body{
 	font-size:12px; color:#333333; font-family: 'Open Sans', sans-serif;
 }
 
-.topWhiteBg{background: #fff;margin: 0 0 0 0;padding: 0; height:80px; }
+.topWhiteBg{background: #fff;margin: 0 0 0 0;padding: 0; height:90px; }
 
 .navbar-brand {float: center !important;width: 160px;height: 81px;
 	background: url(../images/logo-max.png) no-repeat left center;
